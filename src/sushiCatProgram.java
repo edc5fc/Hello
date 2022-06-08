@@ -1,5 +1,5 @@
 // import statements are here
-
+import java.util.Scanner;
 
 // this is the sushiCatProgram class
 public class sushiCatProgram {
@@ -7,9 +7,10 @@ public class sushiCatProgram {
 	// this is the main method
 	public static void main(String[] args) {
 		
-		String cat = "meoow purr lick meeoww cute UWU uwu :3 ;3 -3- o3o >3<";
-		String kitty = cat + " imma EVILL J KITTYZ";
-		System.out.println(kitty);
+		Scanner scanner = new Scanner(System.in);
+		int meowInput = scanner.nextInt(15); 
+		
+		System.out.println(meowInput);
 	}
 
 }
