@@ -1,3 +1,3 @@
 #  This program is for Java practice.
 
-#### 1. String operation.
+#### NOTE: this is currently a silly password game.
