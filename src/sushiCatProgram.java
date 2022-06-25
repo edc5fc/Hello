@@ -42,7 +42,7 @@ public class sushiCatProgram {
 				System.out.println("I like cats also!");
 				break;
 			}
-			else {System.out.println("What???");}
+			System.out.println("What???");
 		};
 		
 		//asks the name of the user
@@ -92,5 +92,23 @@ public class sushiCatProgram {
 		
 		String reaction = randomText.contains("chip kingdom") ? "NO CHIPS!!!":"Thanks for the random text!!!";
 		System.out.println(reaction);
+		
+		//asks the user whether they know the password		
+		String guess = "";
+		System.out.println("\nEnter the password: ");
+		
+		
+		while (true) {
+			guess = scanner.nextLine();
+			
+			if (guess.equals("This is a VERY long password (which is obvious), and the passnumber is missing in it.")) {
+				System.out.println("Correct!");
+				break;
+			}
+			System.out.println("WRONG PASSWORD. TRY AGAIN: ");
+		};
+		
+		//this closes the scanner
+		scanner.close();
 	}
 }
