@@ -108,7 +108,7 @@ public class sushiCatProgram {
 			System.out.println("WRONG PASSWORD. TRY AGAIN: ");
 		};
 		
-		//this closes the scanner
+		//this closes the scanner at the end
 		scanner.close();
 	}
 }
