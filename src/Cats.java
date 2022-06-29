@@ -19,6 +19,8 @@ public class Cats {
 	String secretTextCat;
 	String thingyCode;
 	String crazyPassword;
+	String bannerPattern;
+	String secretBannerPattern;
 	
 	//methods
 	public String getCatName() {
@@ -30,6 +32,6 @@ public class Cats {
 	};
 	
 	public String eatIn(String text) {
-		return "nom nom nom. " + text;
+		return "Nom nom nom. " + text;
 	};
 }

@@ -10,10 +10,35 @@ public class sushiCatProgram {
 		//this is an instance of cats
 		Cats cat = new Cats();
 		
+		//this creates a scanner
+		Scanner scanner = new Scanner(System.in);
+		
+		//this asks the user whether to turn on additional cats or not
+		String additionalCatsInput;
+		boolean additionalCats;
+		
+		while (true) {
+			System.out.println("Allow addtional cats?");
+			additionalCatsInput = scanner.nextLine();
+			
+			if (additionalCatsInput.toLowerCase().equals("yes")) {
+				System.out.println("Additional cats mode is ON.");
+				additionalCats = true;
+				break;
+			}
+			else if (additionalCatsInput.toLowerCase().equals("no"))
+			{
+				System.out.println("Additional cats mode is OFF.");
+				additionalCats = false;
+				break;
+			}
+			System.out.println("What???");
+		};
+		
 		//this checks the cat population
-		System.out.println("cat population notification:");
+		System.out.println("\nCat population notification:");
 		if (cat.numberOfCats > 100_000_000F && cat.numberOfCats < 100_000_000_000_000F) {
-			System.out.println("The cat population is healthy. \n");
+			System.out.println("The cat population is healthy.");
 		}
 		else if (cat.numberOfCats < 100_000_000F) 
 		{
@@ -24,13 +49,17 @@ public class sushiCatProgram {
 			System.out.println("ALERT! ALERT! The cat population is TOO LARGE!");
 		}
 		
-		//asks the user whether they like cats or dogs		
-		Scanner scanner = new Scanner(System.in);
+		//this repeats a purr 40 times
+		for (int i = 0; i < 40; i++) {
+			System.out.println("\nmeoww " + (i + 1) + "!");
+		}
+		
+		//this asks the user whether they like cats or dogs		
 		String preferredAnimal = "";
 		
 		
 		while (true) {
-			System.out.println("Cats or dogs?");
+			System.out.println("\n\nCats or dogs?");
 			preferredAnimal = scanner.nextLine();
 			
 			if (preferredAnimal.toLowerCase().equals("dogs")) {
@@ -40,12 +69,17 @@ public class sushiCatProgram {
 			else if (preferredAnimal.toLowerCase().equals("cats"))
 			{
 				System.out.println("I like cats also!");
+				
+				if(additionalCats) {
+					System.out.println("Here are more cats.");
+				}
+				
 				break;
 			}
 			System.out.println("What???");
 		};
 		
-		//asks the name of the user
+		//this asks the name of the user
 		System.out.println("\nWhat's your username?");
 		String name = scanner.nextLine();
 		
@@ -86,14 +120,14 @@ public class sushiCatProgram {
 			break;
 		}
 		
-		//asks the user to say something random
+		//this asks the user to say something random
 		System.out.println("\nSay something random: ");
 		String randomText = scanner.nextLine();
 		
 		String reaction = randomText.contains("chip kingdom") ? "NO CHIPS!!!":"Thanks for the random text!!!";
 		System.out.println(reaction);
 		
-		//asks the user whether they know the password		
+		//this asks the user whether they know the password		
 		String guess = "";
 		System.out.println("\nEnter the password: ");
 		
@@ -103,10 +137,30 @@ public class sushiCatProgram {
 			
 			if (guess.equals("This is a VERY long password (which is obvious), and the passnumber is missing in it.")) {
 				System.out.println("Correct!");
+				
+				if(additionalCats) {
+					System.out.println("MEOW!!!");
+				}
+				
 				break;
 			}
 			System.out.println("WRONG PASSWORD. TRY AGAIN: ");
 		};
+		
+		//this asks the user to guess the budget of catty_impostor
+		String inputBudget;
+		String actualBudget = "$140,502,413,940";
+		int loopcount = 0;
+		do 
+		{
+			if (loopcount > 0) {System.out.println("That's not it.");}
+			
+			System.out.println("\nGuess the budget of catty_impostor:");
+			inputBudget = scanner.nextLine();
+			loopcount++;
+		}while(!inputBudget.equals(actualBudget));
+		
+		System.out.println("Yup! you guessed it!");
 		
 		//this closes the scanner at the end
 		scanner.close();
