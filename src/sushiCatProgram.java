@@ -35,6 +35,19 @@ public class sushiCatProgram {
 			System.out.println("What???");
 		};
 		
+		//this makes a strange pyramid
+		for(int i = 0; i < 143; i++) {
+			for(int k = 0; k < i; k++) {
+				char charOfText = "You are sus. ".charAt(k % 13);
+				
+				if(charOfText == 's') {continue;}
+				
+				System.out.print(charOfText);
+			}
+			
+			System.out.println();
+		}
+		
 		//this checks the cat population
 		System.out.println("\nCat population notification:");
 		if (cat.numberOfCats > 100_000_000F && cat.numberOfCats < 100_000_000_000_000F) {
