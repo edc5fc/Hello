@@ -1,4 +1,5 @@
 //import statements are here
+import java.util.Arrays;
 import java.util.Scanner;
 
 //this is the sushiCatProgram class
@@ -67,12 +68,26 @@ public class sushiCatProgram {
 			System.out.println("\nmeoww " + (i + 1) + "!");
 		}
 		
+		//this gives the fifth cat score
+		System.out.println("\nFifth cat score: " + cat.catScores[4]);
+		
+		//this outputs all the names of the cat sushies
+		System.out.println("\nCat Sushies: " + Arrays.toString(cat.sushiCatNames));
+		
 		//this asks the user whether they like cats or dogs		
 		String preferredAnimal = "";
 		
+		//teuriyos
+		System.out.println("\nHere are some fish names:");
+		
+		String[] fishNames = {"Fishfish", "Arbogfish", "Reptillian Oufyfish", "Attacking Sguhofish"};
+		
+		for(int i = 0; i < 4; i++) {
+			System.out.println("\n" + fishNames[i]);
+		}
 		
 		while (true) {
-			System.out.println("\n\nCats or dogs?");
+			System.out.println("\nCats or dogs?");
 			preferredAnimal = scanner.nextLine();
 			
 			if (preferredAnimal.toLowerCase().equals("dogs")) {
