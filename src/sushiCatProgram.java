@@ -77,7 +77,7 @@ public class sushiCatProgram {
 		//this asks the user whether they like cats or dogs		
 		String preferredAnimal = "";
 		
-		//teuriyos
+		//this lists several fish names
 		System.out.println("\nHere are some fish names:");
 		
 		String[] fishNames = {"Fishfish", "Arbogfish", "Reptillian Oufyfish", "Attacking Sguhofish"};
@@ -86,6 +86,21 @@ public class sushiCatProgram {
 			System.out.println("\n" + fishNames[i]);
 		}
 		
+		//this searches for a new user in the list newUsers
+		for(int i = 0; i < cat.newUsers.length; i++) {
+			if (cat.newUsers[i].equals("Assault_Meow")) {
+				System.out.println("\n" + cat.newUsers[i] + " is a new user with index " + i);
+			}
+		}
+		
+		//this prints the cat rifles
+		String[] catRifles = {"catK-47", "MeowG-4", "Boomboom big cat rifle 456", "AssaultWifle-1101110MEOW10110101", "MotorMeow General Rifle 11049"};
+		System.out.println("\nHere are the unsorted cat rifles: " + Arrays.toString(catRifles));
+		
+		Arrays.sort(catRifles);
+		System.out.println("Here are the cat rifles sorted: " + Arrays.toString(catRifles));
+		
+		//this asks the user about cats and dogs
 		while (true) {
 			System.out.println("\nCats or dogs?");
 			preferredAnimal = scanner.nextLine();
