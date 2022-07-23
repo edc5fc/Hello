@@ -6,7 +6,8 @@ import java.util.List;
 public class Cats {
 	
 	//properties
-	public List<Integer> grades = new ArrayList<Integer>();
+	public List<Integer> grades = new ArrayList<Integer>(); 
+	public List<String> cats = new ArrayList<String>();
 	
 	//fields
 

@@ -1,7 +1,5 @@
 //import statements are here
 import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
 
 //this is the sushiCatProgram class
 public class sushiCatProgram {
@@ -28,12 +26,64 @@ public class sushiCatProgram {
 			//this is all the command checks
 			if (input.toLowerCase().equals("help")) { 
 				
-				System.out.println("Here is a list of commands: \nExit- Terminates the program.");
+				System.out.println("Here is a list of commands: \nExit- Terminates the program. \nCats Add- Adds a stirng to the Cats list. " + 
+				"\nCats Print- Prints the Cats list. \nCats Contains- Checks if the Cats list contains a certain value." + 
+				"\nIs Cats Empty- Checks if the Cats List is empty. \nCats Remove- Removes the element at the specified index." +
+				"\nCats Clear- clears the Cats list.");
 			}
 			
 			else if (input.toLowerCase().equals("exit")) { 
 			
 				break;
+			}
+			
+			else if (input.toLowerCase().equals("cats add")) { 
+				
+				String catsAddInput = scanner.nextLine();
+				data.cats.add(catsAddInput);
+				System.out.println("Successfully added an item to Cats.");
+			}
+			
+			else if (input.toLowerCase().equals("cats print")) { 
+				
+				System.out.println(data.cats);
+			}
+			
+			else if (input.toLowerCase().equals("cats contains")) { 
+				
+				String catsContainsInput = scanner.nextLine();
+				System.out.println(data.cats.contains(catsContainsInput)); 
+			}
+			
+			else if (input.toLowerCase().equals("is cats empty")) { 
+				
+				System.out.println(data.cats.isEmpty());
+			}
+			
+			else if (input.toLowerCase().equals("cats remove")) { 
+				
+				if (!data.cats.isEmpty()) {
+					String catsRemoveInput = scanner.nextLine();
+					int catsRemoveIndex =  Integer.parseInt(catsRemoveInput);
+					
+					if (catsRemoveIndex > data.cats.size()) {
+						System.out.println("That index is out of range!");
+					}
+					else {
+						data.cats.remove(catsRemoveIndex);
+						System.out.println("Successfully removed item at index " + catsRemoveIndex + " of Cats.");
+					}
+				}
+				else { System.out.println("There's nothing to remove!"); }
+			}
+			
+			else if (input.toLowerCase().equals("cats clear")) { 
+				
+				if (!data.cats.isEmpty()) {
+					data.cats.clear();
+					System.out.println("Successfully cleared the Cats list.");
+				}
+				else {System.out.println("There's nothing to clear!");}
 			}
 			
 			//this increases the loop count
