@@ -7,22 +7,14 @@ public class User {
 	
 	//fields
 	public String username;
-	private List<String> privateInfo = new ArrayList<String>();
+	public List<String> cats = new ArrayList<String>();
 	
-	//methods
-	public void PrivateInfo_Add(String info) {
-		privateInfo.add(info);
+	//static methods
+	public static String meow(User u)
+	{
+		return "Meow I'm " + u.username;
+		
 	}
 	
-	public void PrivateInfo_Clear() {
-		privateInfo.clear();
-	}
-	
-	public String getFullPrivateInfo() {
-		return Arrays.toString(privateInfo.toArray());
-	}
-	
-	public String getSinglePrivateInfo(int index) {
-		return privateInfo.get(index);
-	}
+	//instance methods
 }
