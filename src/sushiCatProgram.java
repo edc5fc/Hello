@@ -10,9 +10,18 @@ public class sushiCatProgram {
 	public static void main(String[] args) {
 		
 		Bacteriophages bacteriophage = new Bacteriophages();
-		bacteriophage.infect("Streptococcus");
+		bacteriophage.species = "Meowmitus Meowmeow";
+	
+		Bacteria bacteria = new Bacteria();
+		bacteria.species = "Meowdomonas";
 		
-		System.out.println(bacteriophage.host + "es infected:" + bacteriophage.infections);
+		List<Microbes> microbes = new ArrayList<Microbes>();
+		microbes.add(bacteria);
+		microbes.add(bacteriophage);
+		
+		for ( Microbes microbe : microbes) {
+			microbe.sayHello();
+		}
 	}
 }
 
