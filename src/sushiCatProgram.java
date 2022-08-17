@@ -9,11 +9,9 @@ public class sushiCatProgram {
 	//this is the main method
 	public static void main(String[] args) {
 		
-		Bacteriophages bacteriophage = new Bacteriophages();
-		bacteriophage.species = "Meowmitus Meowmeow";
+		Bacteriophages bacteriophage = new Bacteriophages("Meowmitus Meowmeow");
 	
-		Bacteria bacteria = new Bacteria();
-		bacteria.species = "Meowdomonas";
+		Bacteria bacteria = new Bacteria("Dhosmeowtus");
 		
 		List<Microbes> microbes = new ArrayList<Microbes>();
 		microbes.add(bacteria);

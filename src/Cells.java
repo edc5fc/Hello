@@ -1,7 +1,9 @@
 public abstract class Cells {
 	//fields
-	public String type;
+	public String species;
 	
 	//methods
-	public abstract void sayHello();
+	public void sayHello() {
+		System.out.println("Hi, i'm a " + species);
+	};
 }
